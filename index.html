@@ -260,10 +260,11 @@
 
         .publication-title {
             font-family: 'Crimson Pro', serif;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            margin-bottom: 0.6rem;
+            font-weight: 700;
+            line-height: 1.4;
         }
 
         .publication-authors {
@@ -290,15 +291,25 @@
 
         .repo:hover {
             border-color: var(--accent);
-            transform: translateX(5px);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
         .repo-name {
             font-family: 'Crimson Pro', serif;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             color: var(--primary);
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            margin-bottom: 0.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .repo-name::before {
+            content: '▸';
+            color: var(--accent);
+            font-size: 1.2rem;
         }
 
         .repo-description {
@@ -309,15 +320,28 @@
 
         .repo-stats {
             display: flex;
-            gap: 1rem;
+            gap: 0.8rem;
             font-size: 0.85rem;
-            color: var(--text-light);
+            flex-wrap: wrap;
+            margin-top: 1rem;
         }
 
         .repo-stat {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 0.3rem;
+            padding: 0.4rem 0.9rem;
+            background: var(--bg);
+            color: var(--text);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+
+        .repo-stat:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
         }
 
         /* Links */
@@ -423,7 +447,7 @@
 
                 <div class="card">
                     <p style="font-size: 1.1rem; line-height: 1.8;">
-                        I'm a data professional with experience spanning analytics, machine learning, statistical modeling, and data infrastructure.
+                         I'm a data professional with experience spanning analytics, machine learning, statistical modeling, and data infrastructure.
                         I have a strong background in both research-driven statistical analysis and production-oriented data engineering. Currently, I'm a Graduate Research Assistant at the University of Washington's Punt Lab, where I focus on fisheries 
                         risk assessment and spatiotemporal modeling.
                     </p>
@@ -464,12 +488,12 @@
                     
                     <div class="publication">
                         <div class="publication-title">Fisheries Risk Assessment for Insurance Products</div>
-                        <div class="publication-authors">Punt Lab, University of Washington | 2024-Present</div>
-                        <div class="publication-venue">In collaboration with the Ocean Modeling Forum</div>
+                        <div class="publication-authors">Punt Lab, University of Washington | 2023-Present</div>
+                        <div class="publication-venue">In collaboration with NOAA, NMFS, and Tribal partners</div>
                         <div class="publication-description">
                             Developing probabilistic loss models (PML) and Loss Exceedance Curves for catastrophic marine heatwave scenarios. 
-                            Built ETL pipelines processing 10M+ NOAA temperature data with automated anomaly detection, compiled comprehensive fisheries 
-                            disaster datasets, and ran Monte Carlo simulations to inform insurance product discussions.
+                            Built ETL pipelines processing 1B+ NOAA records with automated anomaly detection, compiled comprehensive fisheries 
+                            disaster datasets, and ran 10K+ Monte Carlo simulations to inform insurance product discussions with congressional committees. 
                             Presented findings at Ocean Modeling Forum workshop in Tasmania.
                             <br><br>
                             <a href="https://fishery-risk-platform-draft.streamlit.app/" target="_blank" style="color: var(--accent); font-weight: 600;">🔗 View Risk Assessment Platform</a>
@@ -478,7 +502,7 @@
 
                     <div class="publication">
                         <div class="publication-title">Spatiotemporal Forecasting Models for Marine Ecosystems</div>
-                        <div class="publication-authors">Punt Lab, University of Washington | 2024-Present</div>
+                        <div class="publication-authors">Master's Thesis Research | 2023-Present</div>
                         <div class="publication-venue">University of Washington</div>
                         <div class="publication-description">
                             Developed and compared three spatiotemporal forecasting approaches (EOF-SVD decomposition, Bayesian GLLVM-SPDE, 
@@ -521,7 +545,7 @@
                     <div class="card">
                         <p style="font-size: 1.05rem; line-height: 1.7;">
                             <strong>Quantifying Uncertainty in Dynamic Systems: Statistical Approaches for Forecasting and Fisheries Risk Assessment</strong><br>
-                            <em>Expected completion: 2026</em><br><br>
+                            <em>Expected completion: 2025</em><br><br>
                             Developing novel statistical methodologies for forecasting and risk assessment in marine ecosystems, with applications 
                             to fisheries management and climate change adaptation. Combines Bayesian hierarchical models, spatiotemporal statistics, 
                             and Monte Carlo simulation to quantify uncertainty in complex ecological systems.
@@ -556,9 +580,9 @@
                         • Presented findings at Ocean Modeling Forum workshop in Tasmania to researchers, industry partners, and stakeholders<br>
                         • Created interactive Streamlit dashboards presenting analytical findings to stakeholders for decision-making<br>
                         • <a href="https://fishery-risk-platform-draft.streamlit.app/" target="_blank" style="color: var(--accent); font-weight: 600;">View Risk Assessment Platform →</a><br><br>
-        
                         
-                        <strong>Spatiotemporal Modeling & Forecasting ($150M Snow Crab Fishery):</strong><br>
+                        
+                        <strong>Spatiotemporal Modeling:</strong><br>
                         Machine Learning & Model Development:<br>
                         • Built 3 spatiotemporal forecasting models (EOF-SVD, Bayesian GLLVM-SPDE, spectral clustering), improved predictions 15%<br>
                         • Coded custom Bayesian C++/TMB likelihood functions for zero-inflated data with spatial correlation on 12K+ observations<br>
@@ -569,6 +593,7 @@
                         • Applied advanced statistical methodologies including hypothesis testing, cross-validation, and rigorous model evaluation<br>
                         • Optimized model performance through hyperparameter tuning, feature engineering, and automated validation workflows<br><br>
                         
+                        
                         <strong>Other Projects:</strong><br>
                         Machine Learning & Data Engineering:
                         • Developed ML pipelines in Python for clustering, dimensionality reduction, anomaly detection, and forecasting<br>
@@ -577,9 +602,9 @@
                         • Engineered dimensionality reduction pipeline (PCA, UMAP) reducing data 99% while preserving pattern structure<br>
                         • Implemented distributed and parallelized ML model training across CPU cores for large scientific datasets<br>
                         • Deployed interactive Streamlit dashboard enabling non-technical stakeholders to explore environmental data and model outputs
+
                     </p>
                 </div>
-
 
                 <div class="resume-item">
                     <h4>Senior Associate Sales Manager</h4>
@@ -647,7 +672,7 @@
                         </div>
                         <div class="repo-stats">
                             <span class="repo-stat">Python</span>
-                            <span class="repo-stat">Data Visualization</span>
+                            <span class="repo-stat">R</span>
                             <span class="repo-stat">Risk Modeling</span>
                         </div>
                     </div>
@@ -670,7 +695,7 @@
                     </div>
 
                     <div class="card repo">
-                        <div class="repo-name">High Dimensional Clustering</div>
+                        <div class="repo-name">environmental-data-clustering</div>
                         <div class="repo-description">
                             ML pipeline for clustering and dimensionality reduction on high-dimensional environmental sensor data. 
                             Implements DPGMM and HDBSCAN for pattern detection, and PCA/UMAP for 99% data reduction while preserving structure. 
@@ -684,7 +709,7 @@
                     </div>
 
                     <div class="card repo">
-                        <div class="repo-name">Evolved By Nature Sales Analytics</div>
+                        <div class="repo-name">ecommerce-analytics-dashboard</div>
                         <div class="repo-description">
                             Real-time analytics system tracking user behavior and purchasing patterns. Looker dashboards monitoring 12+ KPIs 
                             with anomaly alerting. Includes A/B testing framework, demand forecasting models, and customer segmentation analysis. 
@@ -721,7 +746,7 @@
                     <h3>Education</h3>
                     <div class="resume-item">
                         <h4>M.S. in Quantitative Ecology and Resource Management</h4>
-                        <div class="resume-meta">University of Washington | 2023 - Present (Expected 2026)</div>
+                        <div class="resume-meta">University of Washington | 2023 - Present (Expected 2025)</div>
                         <p class="card-description">
                             <strong>Focus:</strong> Statistics and Data Science<br>
                             <strong>Thesis:</strong> Quantifying Uncertainty in Dynamic Systems: Statistical Approaches for Forecasting and Fisheries Risk Assessment<br><br>
@@ -748,63 +773,63 @@
 
                 <div class="resume-section">
                     <h3>Technical Skills</h3>
-                    <div class="card">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                            <div>
-                                <h4 style="color: var(--accent); margin-bottom: 1rem;">Programming Languages</h4>
-                                <p style="line-height: 2;">
-                                    • Python (pandas, NumPy, scikit-learn, PyTorch, statsmodels)<br>
-                                    • R (tidyverse, ggplot2, Stan, spatial packages)<br>
-                                    • SQL (MySQL, SQLite, complex queries, optimization)<br>
-                                    • C++/TMB (statistical computing, likelihood functions)<br>
-                                    • Java
-                                </p>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--accent); margin-bottom: 1rem;">Machine Learning & Statistical Methods</h4>
-                                <p style="line-height: 2;">
-                                    • Supervised Learning: Regression (linear, logistic, hierarchical), Classification, Time-Series Forecasting<br>
-                                    • Unsupervised Learning: Clustering (K-means, DPGMM, HDBSCAN, Spectral), Dimensionality Reduction (PCA, UMAP, t-SNE)<br>
-                                    • Deep Learning: Neural Networks, Transformers (PyTorch)<br>
-                                    • Statistical Modeling: Bayesian Methods, Hierarchical Models, Hypothesis Testing, Cross-Validation<br>
-                                    • Experimental Design: A/B Testing, Causal Inference, Statistical Power Analysis<br>
-                                    • Model Evaluation: Performance Metrics, Validation Frameworks, Model Comparison
-                                </p>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--accent); margin-bottom: 1rem;">Data Engineering & Infrastructure</h4>
-                                <p style="line-height: 2;">
-                                    • ETL Pipeline Development & Automation<br>
-                                    • Data Quality Frameworks & Validation<br>
-                                    • Large-Scale Data Processing (millions to hundreds of millions of records)<br>
-                                    • Distributed Computing & Parallelization<br>
-                                    • API Integration & Batch Processing<br>
-                                    • Performance Tuning<br>
-                                    • Data Warehouse Concepts (exposure)<br>
-                                    • Version Control (Git/GitHub, collaborative workflows)<br><br>
-                                </p>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--accent); margin-bottom: 1rem;">Business Intelligence & Visualization</h4>
-                                <p style="line-height: 2;">
-                                    • Dashboards: Looker, Streamlit, Power BI, Hex<br>
-                                    • Data Visualization: ggplot2, Plotly, Seaborn, matplotlib<br>
-                                    • Self-Service Analytics Tools & Frameworks<br>
-                                    • Data Storytelling & Executive Communication<br><br>
-                                </p>
-                            </div>
-                            <div>
-                                <h4 style="color: var(--accent); margin-bottom: 1rem;">Analytics & Customer Segmentation</h4>
-                                <p style="line-height: 2;">
-                                    • Cohort Analysis & Customer Segmentation<br>
-                                    • Customer Lifetime Value (LTV) Modeling<br>
-                                    • Demand Forecasting & Inventory Optimization<br>
-                                    • KPI Development & Monitoring<br>
-                                    • Cross-Functional Collaboration<br>
-                                    • Stakeholder Management<br><br>
-                                </p>
-                            </div>
-                        </div>
+                    
+                    <div class="resume-item" style="border-left: 4px solid var(--accent); margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 1.1rem;">Programming Languages</h4>
+                        <p style="line-height: 1.8; color: var(--text-light);">
+                            <strong>Python:</strong> pandas, NumPy, scikit-learn, PyTorch, statsmodels<br>
+                            <strong>R:</strong> tidyverse, ggplot2, Stan, spatial packages<br>
+                            <strong>SQL:</strong> MySQL, SQLite, complex queries, optimization<br>
+                            <strong>C++/TMB:</strong> statistical computing, likelihood functions<br>
+                            <strong>Java:</strong> data structures, algorithms, OOP principles
+                        </p>
+                    </div>
+
+                    <div class="resume-item" style="border-left: 4px solid var(--accent); margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 1.1rem;">Machine Learning & Statistical Methods</h4>
+                        <p style="line-height: 1.8; color: var(--text-light);">
+                            <strong>Supervised Learning:</strong> Regression (linear, logistic, hierarchical), Classification, Time-Series Forecasting<br>
+                            <strong>Unsupervised Learning:</strong> Clustering (K-means, DPGMM, HDBSCAN), Dimensionality Reduction (PCA, UMAP, t-SNE)<br>
+                            <strong>Deep Learning:</strong> Neural Networks, Transformers (PyTorch)<br>
+                            <strong>Statistical Modeling:</strong> Bayesian Methods, Hierarchical Models, Hypothesis Testing, Cross-Validation<br>
+                            <strong>Experimental Design:</strong> A/B Testing, Causal Inference, Statistical Power Analysis<br>
+                            <strong>Model Evaluation:</strong> Perfromance Metrics, Validation Frameworks, Hyperparameter Tuning, Model Comparison
+                        </p>
+                    </div>
+
+                    <div class="resume-item" style="border-left: 4px solid var(--accent); margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 1.1rem;">Data Engineering & Infrastructure</h4>
+                        <p style="line-height: 1.8; color: var(--text-light);">
+                            <strong>ETL Pipeline Development & Automation</strong><br>
+                            <strong>Data Quality Frameworks</strong><br>
+                            <strong>Large-Scale Data Processing</strong><br>
+                            <strong>Distributed Computing & Parallelization</strong><br>
+                            <strong>API Integration & Batch Processing</strong><br>
+                            <strong>Performance Tuning</strong><br>
+                            <strong>Data Warehouse Concepts</strong><br>
+                            <strong>Version Control (Git/GitHub)</strong>
+                        </p>
+                    </div>
+
+                    <div class="resume-item" style="border-left: 4px solid var(--accent); margin-bottom: 1.5rem;">
+                        <h4 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 1.1rem;">Business Intelligence & Visualization</h4>
+                        <p style="line-height: 1.8; color: var(--text-light);">
+                            <strong>Dashboards:</strong> Looker, Streamlit, Power BI, Hex<br>
+                            <strong>Visualization:</strong> ggplot2, Plotly, Seaborn, matplotlib<br>
+                            <strong>Skills:</strong> Data Storytelling, Executive Communication, Stakeholder Management
+                        </p>
+                    </div>
+
+                    <div class="resume-item" style="border-left: 4px solid var(--accent);">
+                        <h4 style="color: var(--accent); margin-bottom: 0.8rem; font-size: 1.1rem;">Analytics & Business Strategy</h4>
+                        <p style="line-height: 1.8; color: var(--text-light);">
+                            <strong>Cohort Analysis</strong> <br>
+                            <strong>Customer Segmentation</strong> <br>
+                            <strong>Customer Lifetime Value (LTV) Modeling</strong> <br>
+                            <strong>Demand Forecasting</strong> <br>
+                            <strong>KPI Development & Monitoring</strong> <br>
+                            <strong>Cross-Functional Collaboration</strong>
+                        </p>
                     </div>
                 </div>
 
@@ -830,13 +855,13 @@
                 
                 <div class="card" style="text-align: center; padding: 3rem;">
                     <h3 style="font-family: 'Crimson Pro', serif; font-size: 2rem; margin-bottom: 1rem; color: var(--primary);">
-                        🦁 Animal Kingdom Game
+                        Animal Kingdom Game
                     </h3>
                     <p style="font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-light);">
                         A fun interactive game I built! Test your knowledge of the animal kingdom and see how well you can identify different species.
                     </p>
                     <a href="https://nmorok.github.io/animal_kingdom/" target="_blank" class="contact-link" style="font-size: 1.1rem;">
-                        🎮 Play Animal Kingdom Game
+                        Play Animal Kingdom Game
                     </a>
                 </div>
 
@@ -876,8 +901,8 @@
                     </div>
                     
                     <p style="font-size: 0.95rem; margin-top: 2rem; color: var(--text-light);">
-                        📍 Based in Seattle, WA<br>
-                        🌍 Available for work in UK with YMS visa (up to 3 years)
+                        Based in Seattle, WA<br>
+                        
                     </p>
                 </div>
             </section>
